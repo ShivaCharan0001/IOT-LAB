@@ -1,9 +1,10 @@
+//Install TCP client on phone and connect to the address given in serial monitor and send a hi message to start receiving the data.
 #include "ESP8266WiFi.h"
 #include "DHT.h"
 const char* ssid=""; //Wifi Name
 const char* password =""; //Wifi Password
 WiFiServer wifiServer(8080);
-DHT dht(D3, DHT22); 
+DHT dht(D3, DHT22); // Check if it is 11 or 22 and change if needed.
 void setup() {
   Serial.begin(115200);
   delay(1000);
